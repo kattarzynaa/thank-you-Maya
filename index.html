@@ -1,53 +1,162 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Thank you Maya!</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-max-width: 1000px;
-margin: auto;
-padding: 40px;
-background: #f7f7f7;
-h1 {
-text-align:center;
-color:#2c3e50;
-.section {
-background:white;
-padding:20px;
-margin:20px 0;
-border-radius:12px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Maya</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2b2b2b;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 72px;
+            margin-bottom: 80px;
+            font-weight: 700;
+        }
+
+    
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .embed-wrapper {
+            border: 6px solid #e5e5e5;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .embed-wrapper iframe {
+            display: block;
+            width: 100%;
+        }
+
+      
+        .signature {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 72px;
+            margin-bottom: 80px;
+            font-weight: 700;
+        }
+
+        .bottom-image {
+            width: 100%;
+            display: block;
+        }
+
+        .media-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 80px;
 }
 
-iframe {
-width:100%;
-border:none;
+.media-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-img {
-max-width:100%;
-border-radius:10px;
-</style>
+.spotify-wrapper iframe,
+.embed-wrapper iframe {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .media-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 54px;
+            }
+
+            .section-title,
+            .signature {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>💙 Thank you Maya!💙</h1>
-<div class="section">
-<h2>Title</h2>
-<p>
-Text here
-</p>
-</div>
-<div class="section">
-<h2>🎬 Our video</h2>
-<video width="320" height="240" controls>
-  <source src="test_video_for Maya.mp4" type="video/mp4">
-  <source src="test_video_for Maya.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-</div>
-<div class="section">
-<h2>🎵 Playlist</h2>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXbNG2KDcFcKOF?utm_source=generator&si=717843c081dd4303" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+
+    <div class="container">
+
+        <h1>Thank you Maya!</h1>
+
+        <section class="media-section">
+
+    <div class="media-card">
+        <h2 class="section-title">A few words to you</h2>
+
+        <div class="embed-wrapper">
+            <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube-nocookie.com/embed/ldCW34h1yfg?si=8E0DwVZWUb0VJUNy"
+                title="YouTube video player"
+                frameborder="0"
+                 referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    
+
+    <div class="media-card">
+        <h2 class="section-title">Listen on repeat!</h2>
+
+        <div class="spotify-wrapper">
+            <iframe
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/1dfqGlXRnZfBzDK0iATfbx?utm_source=generator"
+                width="100%"
+                height="400"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                >
+            </iframe>
+        </div>
+    </div>
+
+</section>
+
+        <section class="section">
+                        <img
+    class="bottom-image"
+    src="https://raw.githubusercontent.com/kattarzynaa/thank-you-Maya/refs/heads/main/thank_you_maya_img_page.png"
+    alt="Thank You Maya">
